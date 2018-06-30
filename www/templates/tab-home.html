@@ -1,0 +1,23 @@
+<ion-view view-title="Citations du Dalaï Lama">
+<ion-content class="padding">
+
+    <div class="card">
+      <div class="item item-body">
+        <img class="full-image" src="img/dalai-lama-0.jpg">
+        <h2>{{citation.text}}</h2>
+        <span class="item-note">{{ citation.author}} - Citation {{citation.id}}</span>
+        <span ng-switch on="citation.fav" class="fav-icon">
+          <a ng-switch-when="1" class="icon ion-ios-star"></a>
+          <a ng-switch-default class="icon ion-ios-star-outline"></a>
+        </span>
+      </div>
+    </div>
+
+    <div class="div-home-button-bar button-bar bar-royal">
+      <a class="button ion-arrow-left-a" ng-click="prevCitation(citation.id)"></a>
+      <a class="button ion-loop" ng-click="citationReload()"></a>
+      <a class="button ion-arrow-right-a" ng-click="nextCitation(citation.id)"></a>
+    </div>
+
+  </ion-content>
+</ion-view>

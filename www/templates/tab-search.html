@@ -1,0 +1,23 @@
+<ion-view view-title="Rechercher dans les citations">
+  <ion-content class="padding">
+
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" ng-model='search' placeholder="Mot recherché...">
+      </label>
+
+    <div class="item item-body" ng-repeat="citation in citations | filter:search" ng-click="favToggle(citation.id)">
+      <span class="">{{ citation.text }}</span>
+      <p>
+        <span class="item-note">{{ citation.author}} - Citation {{citation.id}}</span>
+        <span ng-switch on="citation.fav" class="fav-icon">
+          <a ng-switch-when="1" class="icon ion-ios-star"></a>
+          <a ng-switch-default class="icon ion-ios-star-outline"></a>
+        </span>
+      </p>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>

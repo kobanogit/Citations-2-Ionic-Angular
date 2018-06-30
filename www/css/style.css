@@ -1,0 +1,15 @@
+/* Empty. Add your own CSS if you like */
+
+/* Home */
+
+.div-home-button-bar > .button {
+  font-size: 25px;
+}
+
+/*span.fav-icon a {*/
+.ion-ios-star-outline:before, .ion-ios-star:before {
+  font-size: 20px;
+}
+
+
+/* Search */
